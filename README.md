@@ -6,7 +6,7 @@
 
 - 🌱 Desenvolvendo a segunda parte de um <a href="https://github.com/marcelotaparelli/zullen-fullstack-project">projeto FullStack</a> em .NET e Blazor que envolve o cadastro de clientes e o agendamento de vagas em um Contraturno Escolar
 
-- 📫 Contato: mvtaparelli@gmail.com
+- 📫 Contato: contato@marcelotaparelli.com.br
 
 <div style="display: inline-block;"><br>
   <img align="center" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg">
