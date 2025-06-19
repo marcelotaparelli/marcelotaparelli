@@ -4,7 +4,7 @@
   
 - 👨🏻‍🎓 Graduando em Análise e Desenvolvimento de Sistemas
 
-- 🌱 Desenvolvendo a segunda parte de um <a href="https://github.com/marcelotaparelli/zullen-fullstack-project">projeto FullStack</a> em .NET e Blazor que envolve o cadastro de clientes e o agendamento de vagas em um Contraturno Escolar
+- 🚀 Na etapa de deploy de um <a href="https://github.com/marcelotaparelli/zullen-fullstack-project">projeto FullStack</a> em .NET, Angular e Blazor que envolve o cadastro de clientes, o agendamento de vagas e a adminstração financeira de um Contraturno Escolar.
 
 - 📫 Contato: contato@marcelotaparelli.com.br
 
