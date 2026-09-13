@@ -1,6 +1,6 @@
 # Marcelo Taparelli
 
-Software Engineer focused on building useful, maintainable software and deepening my work in Applied AI Engineering.
+Software Engineer building reliable software and expanding into Applied AI Engineering.
 
 I work across backend systems, web applications, automation, product and production environments, with a strong interest in turning real operational problems into reliable software.
 
