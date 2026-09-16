@@ -34,11 +34,33 @@ My engineering process emphasizes:
 
 ## Selected work
 
+### ops-triage-ai
+
+Applied AI system for operational ticket triage combining a deterministic baseline, a local LLM and a hybrid decision policy with human review, fallback and auditability.
+
+On a frozen 70-ticket held-out benchmark, category accuracy increased from **82.9% to 95.7%**, while HIGH/CRITICAL priority recall increased from **78.6% to 100%**. The deterministic baseline remained stronger on overall risk accuracy, making the trade-offs explicit rather than hiding them.
+
+**Bun · TypeScript · PostgreSQL · Prisma · Ollama · LLM Evaluation · Human-in-the-loop**
+
+[View repository](https://github.com/marcelotaparelli/ops-triage-ai)
+
+### Salus
+
+Backend API case developed with TDD, focused on domain modeling, validation, persistence and automated testing.
+
+The project uses strict TypeScript, Express, Prisma and PostgreSQL, with **47 automated tests** across unit and integration coverage.
+
+**TypeScript · Node.js · Express · PostgreSQL · Prisma · TDD · Vitest**
+
+[View repository](https://github.com/marcelotaparelli/salus)
+
 ### Professional portfolio
 
 A bilingual engineering portfolio built with Bun, Astro, TypeScript and MDX, with explicit quality gates for accessibility, SEO, performance and publication integrity.
 
-**Bun · Astro · TypeScript · MDX · Testing · Accessibility · Performance**
+It also includes a CI/CD pipeline and automated content distribution to DEV.to and LinkedIn.
+
+**Bun · Astro · TypeScript · MDX · Testing · Accessibility · Performance · CI/CD**
 
 [Visit portfolio](https://marcelotaparelli.com.br)
 
@@ -60,16 +82,16 @@ Internal request management solution integrated with GitLab to support organizat
 
 ## Applied AI
 
-I’m expanding my software engineering foundation into Applied AI Engineering, studying and building around:
+I’m expanding my software engineering foundation into Applied AI Engineering through practical systems involving:
 
-- Machine Learning and Deep Learning fundamentals
-- LLM-based systems
-- RAG
-- evaluation
-- AI agents
-- security, cost and production concerns
+- deterministic baselines and LLM integration;
+- evaluation and held-out benchmarks;
+- hybrid decision systems and human review;
+- RAG and evidence-grounded systems;
+- AI agents and agentic workflows;
+- security, observability, cost and production concerns.
 
-I treat AI as an engineering tool, not as a requirement: the goal is to use it where it creates real value.
+I treat AI as an engineering tool, not as a requirement: the goal is to use it where it creates measurable value.
 
 ## Writing
 
