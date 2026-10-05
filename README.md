@@ -1,61 +1,92 @@
 # Marcelo Taparelli
 
-Software Engineer focused on building reliable, secure, and performance-conscious systems while deepening my work in **AI Engineering**.
+**AI Engineer & Software Engineer | Python, RAG, Agents, Evals | TypeScript, Bun | Product-minded**
 
-I work across backend systems, web applications, automation, product, and production environments, with a strong interest in turning real operational problems into useful, measurable software.
+I build reliable AI products and backend systems from problem to production.
 
-I’m currently pursuing a **Postgraduate Program in AI Engineering at Cruzeiro do Sul**.
+My work combines **AI Engineering** — RAG, agentic workflows, evaluation, guardrails and observability — with **Software Engineering** in TypeScript/Bun, PostgreSQL, Redis, Docker and cloud infrastructure.
+
+I care about the product problem first: measurable outcomes, explicit trade-offs, security, reliability and systems that can actually be operated in production.
+
+I’m currently pursuing a **Postgraduate Program in AI Engineering**.
 
 ## Current focus
 
-- Software Engineering
 - AI Engineering
+- RAG and evidence-grounded systems
+- AI Agents and agentic workflows
+- LLM evaluation and guardrails
 - Backend systems and APIs
-- Model evaluation and domain adaptation
 - Secure Software Engineering
-- Performance, observability, and production reliability
-- Software architecture and automated testing
-- ML Systems / AI Infrastructure — practical experimental work
-- Agentic Software Development
+- Observability and production reliability
+- Model evaluation and domain adaptation
+- ML Systems / AI Infrastructure
+- Product Engineering
 
 ## Core stack
 
-**TypeScript · Bun · Node.js · Python · PyTorch · PostgreSQL · Docker**
+### AI Engineering
 
-I also work with Laravel, WordPress, CI/CD, Terraform, Redis, and cloud infrastructure.
+**Python · FastAPI · RAG · Embeddings · pgvector · Agents · LangGraph · OpenAI · Evals · PyTorch · OpenTelemetry**
+
+### Software Engineering
+
+**TypeScript · Bun · Node.js · PostgreSQL · Redis · Docker · Terraform · AWS**
+
+### Product Engineering
+
+**Product thinking · Architecture · Security · Performance · Observability · Automated testing · CI/CD**
+
+I also work with Prisma, Express, Astro, Laravel, WordPress and cloud infrastructure.
 
 ## How I work
 
-I prefer simple systems, explicit boundaries, and dependencies that justify their cost.
+I prefer simple systems, explicit boundaries and dependencies that justify their cost.
 
 My engineering process emphasizes:
 
-- understanding the problem before choosing technology;
+- understanding the product problem before choosing technology;
 - pragmatic architecture and maintainable code;
+- deterministic controls around probabilistic AI systems;
 - automated tests and explicit quality gates;
 - secure-by-default implementation;
 - bounded resource usage and performance-aware design;
 - observability and predictable failure modes;
 - measurable AI evaluation instead of intuition-only decisions;
-- AI coding agents with human review.
+- human approval around high-impact AI actions;
+- explicit trade-offs between quality, latency, cost and reliability.
 
 ## Selected work
 
+### OpsPilot AI
+
+Production-oriented AI operations copilot built around **evidence-grounded RAG and approval-gated agentic workflows**.
+
+The system combines hybrid retrieval with PostgreSQL/pgvector, bounded LangGraph orchestration, structured outputs, human approval before external actions, OpenAI integration, real GitLab execution, evaluation gates, OpenTelemetry observability and security guardrails.
+
+The architecture includes tenant isolation with PostgreSQL RLS, deterministic policy enforcement outside the LLM, immutable action hashes, idempotent external actions, reconciliation for ambiguous provider outcomes, citation validation, structured logging and fail-open telemetry.
+
+The project also includes real post-release integration evidence against **OpenAI and GitLab**, automated regression gates, security testing and CI/CD release validation.
+
+**Python · FastAPI · RAG · pgvector · LangGraph · OpenAI · GitLab · PostgreSQL · OpenTelemetry · Docker · Terraform**
+
+[View repository](https://github.com/marcelotaparelli/opspilot-ai)
+
 ### ops-triage-ai
 
-Auditable operational ticket-triage system combining a deterministic baseline, a local LLM, and a hybrid decision policy with human review, fallback, and traceability.
+Auditable operational ticket-triage system combining a deterministic baseline, a local LLM and a hybrid decision policy with human review, fallback and traceability.
 
-The project evolved into a broader AI evaluation environment covering deterministic rules, generative LLMs, and probabilistic decision models on the same frozen **70-ticket synthetic held-out benchmark**.
+The project evolved into an AI evaluation environment covering deterministic rules, generative LLMs and probabilistic decision models on the same frozen **70-ticket synthetic held-out benchmark**.
 
 The original benchmark increased category accuracy from **82.9% with the deterministic baseline to 95.7% with the local LLM**, while HIGH/CRITICAL priority recall increased from **78.6% to 100%**. The deterministic baseline remained stronger on overall risk accuracy, keeping regressions and trade-offs explicit.
 
 I later evaluated **Jev 1.13** separately on the same held-out set, where it reached **94.29% exact-tuple accuracy (66/70)** without domain-specific training from this project.
 
-I then evaluated **Laya** zero-shot and after domain adaptation. The base checkpoint reached **11.43% exact-tuple accuracy (8/70)**; after training on **1,120 domain-specific TRAIN tickets**, validation-based checkpoint selection, and GPU training with **PyTorch/CUDA and mixed precision**, the adapted model reached **85.71% (60/70)** on the unchanged held-out set.
+I also evaluated **Laya** zero-shot and after domain adaptation. The base checkpoint reached **11.43% exact-tuple accuracy (8/70)**; after training on **1,120 domain-specific TRAIN tickets**, validation-based checkpoint selection and GPU training with **PyTorch/CUDA and mixed precision**, the adapted model reached **85.71% (60/70)** on the unchanged held-out set.
 
 Jev and Laya remain **evaluation-only** and were not added to the production path or `HybridPolicy`.
 
-The system also includes API limits, concurrency control, request IDs, structured redacted logs, metrics, health/readiness checks, graceful shutdown, and measured latency.
+The system also includes API limits, concurrency control, request IDs, structured redacted logs, metrics, health/readiness checks, graceful shutdown and measured latency.
 
 **Bun · TypeScript · PostgreSQL · Prisma · Ollama · Python · PyTorch · CUDA · Jev · Laya · Model Evaluation · Human-in-the-loop**
 
@@ -63,9 +94,11 @@ The system also includes API limits, concurrency control, request IDs, structure
 
 ### resilient-transaction-api
 
-Backend system for resilient external-payment transactions, designed around concurrent idempotency, PostgreSQL as source of truth, Redis-assisted caching and rate limiting, provider retries, circuit breaking, authentication, observability, and graceful degradation.
+Backend system for resilient external-payment transactions, designed around concurrent idempotency, PostgreSQL as source of truth, Redis-assisted caching and rate limiting, provider retries, circuit breaking, authentication, observability and graceful degradation.
 
-The project also includes Docker-based local infrastructure and a temporary AWS validation lab built with Terraform across VPC networking, ECS/Fargate, ALB, RDS, ElastiCache, ECR, Secrets Manager, IAM, and CloudWatch.
+The project includes Docker-based local infrastructure and an AWS validation lab built with Terraform across VPC networking, ECS/Fargate, ALB, RDS, ElastiCache, ECR, Secrets Manager, IAM and CloudWatch.
+
+It focuses on the kind of reliability concerns that become especially important when AI systems depend on external providers, asynchronous workflows and distributed infrastructure.
 
 **Bun · TypeScript · PostgreSQL · Redis · Docker · Terraform · AWS · Observability · Resilience**
 
@@ -73,9 +106,9 @@ The project also includes Docker-based local infrastructure and a temporary AWS 
 
 ### Salus
 
-Backend API developed with TDD, focused on domain modeling, validation, persistence, authentication, and automated testing.
+Backend API developed with TDD, focused on domain modeling, validation, persistence, authentication and automated testing.
 
-Built with strict TypeScript, Express, Prisma, and PostgreSQL. The original core was implemented manually using TDD and is evolving through hardening work focused on security, reliability, and bounded backend behavior.
+Built with strict TypeScript, Express, Prisma and PostgreSQL. The project explores clean architecture, use-case boundaries, ownership, security and maintainable backend design.
 
 **TypeScript · Node.js · Express · PostgreSQL · Prisma · TDD · Vitest**
 
@@ -83,9 +116,9 @@ Built with strict TypeScript, Express, Prisma, and PostgreSQL. The original core
 
 ### Professional portfolio
 
-Bilingual engineering portfolio built with Bun, Astro, TypeScript, and MDX, with explicit quality gates for accessibility, SEO, performance, and publication integrity.
+Bilingual engineering portfolio built with Bun, Astro, TypeScript and MDX, with explicit quality gates for accessibility, SEO, performance and publication integrity.
 
-It includes CI/CD, automated artifact validation, and controlled content distribution to DEV.to and LinkedIn.
+It includes CI/CD, automated artifact validation and controlled content distribution.
 
 **Bun · Astro · TypeScript · MDX · Testing · Accessibility · Performance · CI/CD**
 
@@ -101,7 +134,7 @@ Automation developed to reduce manual steps in the publishing workflow for petit
 
 ### Atendimento EVAG
 
-Internal request management solution integrated with GitLab to support organization, traceability, and operational workflow.
+Internal request management solution integrated with GitLab to support organization, traceability and operational workflow.
 
 **Software · Automation · GitLab**
 
@@ -109,34 +142,53 @@ Internal request management solution integrated with GitLab to support organizat
 
 ## AI Engineering
 
-I’m extending my software engineering foundation through practical AI Engineering work involving:
+I build and evaluate AI systems with the same engineering discipline I apply to backend software.
 
-- deterministic baselines and LLM integration;
-- structured outputs and typed decision models;
-- frozen held-out benchmarks and reproducible evaluation;
+My work includes:
+
+- RAG and evidence-grounded generation;
+- embeddings and vector search with pgvector;
+- agentic workflows with bounded tool use;
+- human approval before high-impact external actions;
+- structured outputs and typed contracts;
+- deterministic policy enforcement around probabilistic models;
+- offline and live evaluation;
+- frozen held-out datasets and reproducible benchmarks;
+- deterministic baselines for comparison;
 - domain adaptation and fine-tuning;
 - TRAIN / VALIDATION / HELD-OUT separation;
 - validation-based checkpoint selection;
 - confidence and calibration analysis;
-- hybrid decision systems, human review, and fallbacks;
-- PyTorch, GPU/CUDA training, mixed precision, and checkpoint lifecycle;
-- security, observability, latency, cost, and operational trade-offs.
+- observability for LLM, retrieval and agent workflows;
+- latency, security and cost controls;
+- failure handling, fallbacks and reconciliation;
+- PyTorch, GPU/CUDA training and mixed precision.
 
-My current learning and building direction includes:
+I treat AI as a component inside a larger software system.
 
-- RAG and evidence-grounded systems;
-- AI agents and stateful agentic workflows;
-- ML Systems and AI Infrastructure;
-- GPU-aware model training and inference;
-- practical AWS deployment and cloud architecture.
+The model may be probabilistic; the surrounding system should provide **schemas, policies, tests, metrics, observability, security boundaries, fallbacks and human control**.
 
-I treat AI as an engineering tool, not as a requirement: the goal is to use it where it creates measurable value.
+## Product Engineering
+
+I’m interested in the intersection of **AI, software engineering and product**.
+
+That means starting from a real problem, understanding the operational constraints and then choosing the simplest architecture capable of delivering measurable value.
+
+For me, engineering is not only about making software work. It is also about deciding:
+
+- whether AI is actually necessary;
+- what should remain deterministic;
+- what failures are acceptable;
+- what needs human approval;
+- what should be measured;
+- how the system behaves under degraded conditions;
+- whether the complexity creates enough product value to justify its cost.
 
 ## Writing
 
-I write about engineering decisions, software, AI Engineering, security, performance, reliability, and product.
+I write about AI Engineering, software architecture, model evaluation, agentic systems, security, performance, reliability and product engineering.
 
-Recent topics include model evaluation, Jev, Laya, domain adaptation, frozen held-outs, calibration, and the operational trade-offs of self-hosted AI.
+Recent topics include model evaluation, Jev, Laya, domain adaptation, frozen held-outs, calibration and the operational trade-offs of self-hosted AI.
 
 [Read my articles](https://marcelotaparelli.com.br/en/articles/)
 
@@ -144,4 +196,5 @@ Recent topics include model evaluation, Jev, Laya, domain adaptation, frozen hel
 
 - [Portfolio](https://marcelotaparelli.com.br)
 - [LinkedIn](https://www.linkedin.com/in/marcelo-taparelli/)
+- [GitHub](https://github.com/marcelotaparelli)
 - [Email](mailto:contato@marcelotaparelli.com.br)
